@@ -1,36 +1,39 @@
 <script>
 
 export default {
-    name: "AppHeader"
+    name: "AppMain.vue"
 }
 
 </script>
 
 <template>
-    <header>
 
-        <!-- title -->
+   <main>
 
-        <div id="container">
-
-            <h1>YU-GI-OH API</h1>
+        <div id="cards_container">
 
         </div>
 
-    </header>
+
+   </main>
+
 </template>
 
 <style lang="scss" scoped>
 @use "src/styles/general.scss" as *;
 @use "src/styles/partials/variables.scss" as*;
 
-header {
+main{
     width: 100%;
-    height: 80px;
+    height: 100vh;
+    background-color: $orange;
+    padding-top: 80px;
 
-    #container {
+    #cards_container{
         @include container;
-        height: 80px;
+        min-height: 500px;
+        background-color: $white;
     }
 }
+
 </style>
