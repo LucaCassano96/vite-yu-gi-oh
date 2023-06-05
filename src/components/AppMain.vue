@@ -1,8 +1,18 @@
 <script>
+import { store } from "./../store.js";
 
+import axios from "axios";
+import AppCard from './AppCard.vue'
 export default {
-    name: "AppMain.vue"
-}
+    name: "AppMain.vue",
+    components:{
+        AppCard
+    },
+  data() {
+    return {
+      store,
+    }
+}}
 
 </script>
 
@@ -11,6 +21,8 @@ export default {
    <main>
 
         <div id="cards_container">
+
+            <AppCard v-for="character in store.cards " :details="character"/>
 
         </div>
 
@@ -31,6 +43,8 @@ main{
 
     #cards_container{
         @include container;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
         min-height: 500px;
         background-color: $white;
     }
