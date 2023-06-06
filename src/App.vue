@@ -2,12 +2,13 @@
 import { store } from "./store.js";
 import axios from "axios";
 import AppHeader from './components/AppHeader.vue'
-import AppMain from './components/AppMain.vue'
-
+import AppListCard from './components/AppListCard.vue'
+import AppSearch from './components/AppSearch.vue'
 export default {
   components: {
     AppHeader,
-    AppMain,
+    AppListCard,
+    AppSearch,
   },
   data() {
     return {
@@ -34,7 +35,11 @@ export default {
 
 <template>
   <AppHeader />
-  <AppMain />
+  <main>
+    <AppSearch />
+    <AppListCard />
+  </main>
+  
 </template>
 
 <style lang="scss">
