@@ -17,7 +17,12 @@ export default {
   },
   methods: {
     getCharacters() {
-      axios.get(store.apiURL)
+
+      let myUrl = store.apiURL;
+
+      
+
+      axios.get(myUrl)
         .then(res => {
           store.cards = res.data.data;
         }
@@ -36,7 +41,7 @@ export default {
 <template>
   <AppHeader />
   <main>
-    <AppSearch />
+    <AppSearch @mySelection="getCharacters"/>
     <AppListCard />
   </main>
   

@@ -4,6 +4,11 @@ import { store } from "../store.js";
 
 export default{
     name: "AppSearch",
+    data() {
+        return {
+            store,
+        }
+    }
 }
 
 </script>
@@ -12,8 +17,9 @@ export default{
 
     <div class="select">
         <span>Scegli per archetipo:</span>
-        <select name="archetipo" id="archetipo">
-            <option value="Alien">Alien</option>
+        <select name="archetype" id="archetype">
+            <option value="All">All</option>
+            <option @click="$emit('mySelection')" value="Alien">Alien</option>
             <option value="Monster">Monster</option>
             <option value="Noble Knight">Noble Knight</option>
 

@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-    <main>
+    <section id="appListCard">
 
         <div id="cards_container">
 
@@ -27,14 +27,14 @@ export default {
         </div>
 
 
-    </main>
+    </section>
 </template>
 
 <style lang="scss" scoped>
 @use "src/styles/general.scss" as *;
 @use "src/styles/partials/variables.scss" as*;
 
-main {
+#appListCard{
     width: 100%;
     height: 100vh;
     background-color: $orange;
