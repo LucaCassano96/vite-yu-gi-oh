@@ -20,7 +20,9 @@ export default {
 
       let myUrl = store.apiURL;
 
-      
+      if (store.option !== "All") {
+        myUrl += `?${store.apiArchetypeParameter}=${store.option}`
+      }
 
       axios.get(myUrl)
         .then(res => {
@@ -41,10 +43,9 @@ export default {
 <template>
   <AppHeader />
   <main>
-    <AppSearch @mySelection="getCharacters"/>
+    <AppSearch @mySelection="getCharacters" />
     <AppListCard />
   </main>
-  
 </template>
 
 <style lang="scss">

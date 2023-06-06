@@ -17,7 +17,8 @@ export default{
 
     <div class="select">
         <span>Scegli per archetipo:</span>
-        <select name="archetype" id="archetype">
+        <select v-model="store.option" name="archetype" id="archetype">
+            
             <option value="All">All</option>
             <option @click="$emit('mySelection')" value="Alien">Alien</option>
             <option value="Monster">Monster</option>

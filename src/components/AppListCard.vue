@@ -36,7 +36,7 @@ export default {
 
 #appListCard{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: $orange;
     padding-top: 80px;
 
